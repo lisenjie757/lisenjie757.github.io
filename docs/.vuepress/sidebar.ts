@@ -99,4 +99,12 @@ export default sidebar([
     collapsible: true,
     children: "structure",
   },
+  {
+    text: "",
+    icon: "",
+    prefix: "/paperreading/",
+    link: "",
+    collapsible: true,
+    children: "structure",
+  },
 ]);
