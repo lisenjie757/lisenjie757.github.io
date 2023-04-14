@@ -100,7 +100,7 @@ export default sidebar([
     children: "structure",
   },
   {
-    text: "",
+    text: "读论文",
     icon: "",
     prefix: "/paperreading/",
     link: "",
