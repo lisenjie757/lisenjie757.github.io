@@ -36,8 +36,8 @@ if (screen.width >= 768) {
 			//apiPath: "https://live2d-widget.netlify.app/live2d_api/",
 			//cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/"
 			//使用 api 才能完美换装，但测试 netlify 和 Vercel api 部署有问题，推荐自建或使用本地 cdn
-			apiPath: "https://newzone.top/live2d-widget/live2d_api/"
-			//cdnPath: live2d_path + "live2d_api/"
+			//apiPath: "https://newzone.top/live2d-widget/live2d_api/"
+			cdnPath: live2d_path + "live2d_api/"
 		});
 	});
 }
