@@ -3,10 +3,10 @@
 home: true
 layout: BlogHome
 icon: home
-title: 互联网小白
+title: 你好啊
 #heroImage: /logo.svg
-heroText: 互联网小白
-tagline: 盛年不重来，一日难再晨
+heroText: 阿斯顿
+tagline: 重重次
 bgImage: https://img.newzone.top/home-bg-1.jpg
 heroFullScreen: false
 #projects:
