@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>浙江大学硕士</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 16 Apr 2023 07:03:21 GMT</pubDate>
-    <lastBuildDate>Sun, 16 Apr 2023 07:03:21 GMT</lastBuildDate>
+    <pubDate>Sun, 16 Apr 2023 08:08:18 GMT</pubDate>
+    <lastBuildDate>Sun, 16 Apr 2023 08:08:18 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -21,6 +21,13 @@
 <h2> new</h2>
 <p>i like learning</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>你好啊</title>
+      <link>https://newzone.top/blog.html</link>
+      <guid>https://newzone.top/blog.html</guid>
+      <source url="https://newzone.top/rss.xml">你好啊</source>
+      <pubDate>Fri, 14 Apr 2023 11:22:44 GMT</pubDate>
     </item>
   </channel>
 </rss>
