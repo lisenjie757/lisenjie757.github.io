@@ -9,6 +9,7 @@ export default navbar([
     icon: "study",
     link: "/knowledge",
     prefix: "/knowledge/",
+    children: "structure"
   },
 
   { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
