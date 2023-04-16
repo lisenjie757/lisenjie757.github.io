@@ -6,17 +6,17 @@
     <link>https://newzone.top/</link>
     <description>李森杰的个人主页</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 16 Apr 2023 08:35:56 GMT</pubDate>
-    <lastBuildDate>Sun, 16 Apr 2023 08:35:56 GMT</lastBuildDate>
+    <pubDate>Sun, 16 Apr 2023 08:55:24 GMT</pubDate>
+    <lastBuildDate>Sun, 16 Apr 2023 08:55:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
       <title>ALexNet</title>
-      <link>https://newzone.top/paper/Alexnet.html</link>
-      <guid>https://newzone.top/paper/Alexnet.html</guid>
+      <link>https://newzone.top/knowledge/paper/Alexnet.html</link>
+      <guid>https://newzone.top/knowledge/paper/Alexnet.html</guid>
       <source url="https://newzone.top/rss.xml">ALexNet</source>
       <description>ALexNet new i like learning</description>
-      <pubDate>Sun, 16 Apr 2023 07:02:00 GMT</pubDate>
+      <pubDate>Sun, 16 Apr 2023 08:53:58 GMT</pubDate>
       <content:encoded><![CDATA[<h1> ALexNet</h1>
 <h2> new</h2>
 <p>i like learning</p>
