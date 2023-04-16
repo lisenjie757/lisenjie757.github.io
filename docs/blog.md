@@ -8,6 +8,7 @@ heroText: 阿斯顿
 tagline: 重重次
 bgImage: https://img.newzone.top/home-bg-1.jpg
 heroFullScreen: false
+article: false
 #projects:
 #  - icon: project
 #    name: 项目名称
