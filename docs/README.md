@@ -1,7 +1,8 @@
 ---
+home: True
 article: false
 title: LearnData 开源笔记
-icon: note
+sidebar: false
 ---
 
 This is my knowledge reposity.
