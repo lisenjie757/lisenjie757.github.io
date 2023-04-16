@@ -3,7 +3,6 @@
 home: false
 layout: BlogHome
 icon: home
-title: 你好啊
 #heroImage: /logo.svg
 heroText: 阿斯顿
 tagline: 重重次
