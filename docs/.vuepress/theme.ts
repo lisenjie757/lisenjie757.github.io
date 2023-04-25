@@ -159,7 +159,7 @@ export default hopeTheme({
       imgSize: true,
       figure: true,
       include: true, //导入文件
-      // katex: true,
+      katex: true,
       mark: true,
       // mermaid: true,
       footnote: true,
