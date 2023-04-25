@@ -60,7 +60,7 @@ export default hopeTheme({
   // sidebarSorter: ['readme', 'order', 'title'],
 
   // footer: "默认页脚",
-  // displayFooter: true,
+  displayFooter: true,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
@@ -83,7 +83,7 @@ export default hopeTheme({
       ],
       */
       //Wechat: "https://img.newzone.top/wechat.svg",
-      Email: "13336991309@163.com",
+      Email: "mailto:13336991309@163.com",
       //Discord: "https://discord.gg/PZTQfJ4GjX",
       //RSS: "https://newzone.top/rss.xml",
     },
@@ -100,7 +100,7 @@ export default hopeTheme({
     // 评论配置（仅做样例，记得更换）
     comment: {
       provider: "Waline",
-      serverURL: "https://waline.newzone.top",
+      serverURL: "https://blog-comment-bay.vercel.app",
       reaction: [
         "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44d.png",
         "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44f.png",
