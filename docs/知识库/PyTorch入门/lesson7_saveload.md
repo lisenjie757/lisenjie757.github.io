@@ -136,14 +136,14 @@ print(net)
     )
 
 
-## 3.初始化优化器
+### 3.初始化优化器
 
 
 ```python
 optimizer = optim.SGD(net.parameters(),lr=0.001,momentum=0.9)
 ```
 
-## 4.保存一般断点
+### 4.保存一般断点
 
 
 ```python
@@ -160,7 +160,7 @@ torch.save({
     },PATH)
 ```
 
-## 5.加载一般断点
+### 5.加载一般断点
 
 
 ```python
@@ -194,8 +194,8 @@ model.train()
 
 
 
-## 6.迁移学习下的热启动模式
-### 只需设置strict=False来忽略非匹配的模型层参数
+### 6.迁移学习下的热启动模式
+- 只需设置strict=False来忽略非匹配的模型层参数
 
 
 ```python
