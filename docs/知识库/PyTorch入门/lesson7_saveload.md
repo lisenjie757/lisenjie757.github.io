@@ -28,6 +28,9 @@ model.load_state_dict(torch.load('model_weights.pth'))
 model.eval()
 ```
 
+
+
+
     VGG(
       (features): Sequential(
         (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -75,7 +78,9 @@ model.eval()
     )
 
 
+
 ## 保存和加载整个模型结构和权重
+
 
 ```python
 torch.save(model,"model.pth")
@@ -157,6 +162,7 @@ torch.save({
 
 ### 5.加载一般断点
 
+
 ```python
 ## 加载前首先初始化模型和优化器
 model = Net()
@@ -173,6 +179,9 @@ model.eval()
 # - or -
 model.train()
 ```
+
+
+
 
     Net(
       (conv1): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1))
@@ -196,4 +205,9 @@ model = Net()
 model.load_state_dict(torch.load(PATH),strict=False)
 ```
 
+
+
+
     <All keys matched successfully>
+
+
