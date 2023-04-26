@@ -65,9 +65,7 @@ plt.show()
 ```
 
 
-    
-![png](lesson2_data_files/lesson2_data_4_0.png)
-    
+![result](https://i.imgur.com/Ui7pdoU.png)
 
 
 ## 创建自定义数据集
@@ -133,9 +131,7 @@ print(label)
 
 
 
-    
-![png](lesson2_data_files/lesson2_data_10_1.png)
-    
+![result](https://i.imgur.com/UEoa2W0.png)
 
 
     tensor(1)
