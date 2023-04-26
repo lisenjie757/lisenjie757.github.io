@@ -11,5 +11,6 @@ export default navbar([
     prefix: "/知识库/",
   },
 
+  { text: "资料收集", icon: "workingDirectory", link: "https://notes.orangex4.cool/?git=github&github=lisenjie757/blog" },
   { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
 ]);
