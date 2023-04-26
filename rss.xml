@@ -6,10 +6,201 @@
     <link>https://lisenjie757.github.io/</link>
     <description>李森杰的个人主页</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 26 Apr 2023 10:48:48 GMT</pubDate>
-    <lastBuildDate>Wed, 26 Apr 2023 10:48:48 GMT</lastBuildDate>
+    <pubDate>Wed, 26 Apr 2023 12:09:15 GMT</pubDate>
+    <lastBuildDate>Wed, 26 Apr 2023 12:09:15 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>lesson0. GPU性能测试</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/gpu_test.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/gpu_test.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson0. GPU性能测试</source>
+      <description>lesson0. GPU性能测试 import torch import time print(torch.__version__) # 返回pytorch的版本 print(torch.cuda.is_available()) # 当CUDA可用时返回True a = torch.randn(10000, 1000) # 返回10000行1000列的张量矩阵 b = torch.randn(1000, 2000) # 返回1000行2000列的张量矩阵 t0 = time.time() # 记录时间 c = torch.matmul(a, b) # 矩阵乘法运算 t1 = time.time() # 记录时间 print(a.device, t1 - t0, c.norm(2)) # c.norm(2)表示矩阵c的二范数 device = torch.device(&amp;apos;cuda&amp;apos;) # 用GPU来运行 a = a.to(device) b = b.to(device) # 初次调用GPU，需要数据传送，因此比较慢 t0 = time.time() c = torch.matmul(a, b) t2 = time.time() print(a.device, t2 - t0, c.norm(2)) # 这才是GPU处理数据的真实运行时间，当数据量越大，GPU的优势越明显 t0 = time.time() c = torch.matmul(a, b) t2 = time.time() print(a.device, t2 - t0, c.norm(2))</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson0. GPU性能测试</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>lesson1. 张量操作</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson1_tensor.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson1_tensor.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson1. 张量操作</source>
+      <description>lesson1. 张量操作 import torch import numpy as np</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson1. 张量操作</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 初始化张量</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 张量的属性</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 张量运算</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 与Numpy互相转换</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>lesson2. 数据集和数据加载</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson2_data.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson2_data.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson2. 数据集和数据加载</source>
+      <description>lesson2. 数据集和数据加载 import torch from torch.utils.data import Dataset from torchvision import datasets from torchvision.transforms import ToTensor import matplotlib.pyplot as plt</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson2. 数据集和数据加载</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 加载预加载数据集</h2>
+<ul>
+<li>root ：训练集/测试集存储路径</li>
+<li>train ：确定是训练集还是测试集</li>
+<li>download=True ：如果root不可用 从互联网上下载数据</li>
+<li>transform / target_transform ：指定特征和标签的转换</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 迭代和可视化数据集</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://i.imgur.com/Ui7pdoU.png" alt="result" tabindex="0" loading="lazy"><figcaption>result</figcaption></figure>
+<h2> 创建自定义数据集</h2>
+<ul>
+<li>__init__ ：创建类对象时运行一次 包括图像 标注 和 变换</li>
+<li>__len__ ：返回数据集样本数</li>
+<li>__getitem__ ：根据索引加载和返回数据样本 包括图像 标注 和 变换</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 使用DataLoaders训练Data</h2>
+<ul>
+<li>DataLoader的作用：minibatches采样，每epoch reshuffle data，多线程加速</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 通过DataLoader迭代</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<figure><img src="https://i.imgur.com/UEoa2W0.png" alt="result" tabindex="0" loading="lazy"><figcaption>result</figcaption></figure>
+
+]]></content:encoded>
+      <enclosure url="https://i.imgur.com/Ui7pdoU.png" type="image/png"/>
+    </item>
+    <item>
+      <title>lesson3. 数据预处理</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson3_transform.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson3_transform.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson3. 数据预处理</source>
+      <description>lesson3. 数据预处理 图像和标签的转换函数 ToTensor() ：转换PIL图像和NumPy数组为FloatTensor，并归一化图像像素值为[0.,1.] Lamda Transforms ：此函数为用户自定义lamda函数；此处函数为将整数转换为one-hot编码，首先创建zero张量，长度取决于类别数，然后调用scatter_函数通过整数y对张量进行1填充 scatter_函数填充原理(dim=0) ：self[ index[i][j] ] [j] = src[i][j]</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson3. 数据预处理</h1>
+<h2> 图像和标签的转换函数</h2>
+<ul>
+<li>ToTensor() ：转换PIL图像和NumPy数组为FloatTensor，并归一化图像像素值为[0.,1.]</li>
+<li>Lamda Transforms ：此函数为用户自定义lamda函数；此处函数为将整数转换为one-hot编码，首先创建zero张量，长度取决于类别数，然后调用scatter_函数通过整数y对张量进行1填充</li>
+<li>scatter_函数填充原理(dim=0) ：self[ index[i][j] ] [j] = src[i][j]</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>lesson4. 构建神经网络</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson4_build.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson4_build.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson4. 构建神经网络</source>
+      <description>lesson4. 构建神经网络 import os import torch from torch import nn from torch.utils.data import DataLoader from torchvision import datasets, transforms</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson4. 构建神经网络</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 获取训练设备</h2>
+<ul>
+<li>查看有无可用GPU</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 定义神经网络类</h2>
+<ul>
+<li>super(NeuralNetwork,self) ：查找NeuralNetwork的父类，对self实施父类的方法</li>
+<li>nn.Flatten(x,[start=1,end=-1]) ：对输入张量进行指定维数降维，此处将(1,28,28)降成(1,28*28)</li>
+<li>nn.Sequential() ：序列容器，将神经网络模块按顺序添加到容器中</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 模型层解构</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> nn.Flatten</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> nn.Linear</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> nn.ReLu</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> nn.Sequential</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> nn.Softmax</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 模型参数</h2>
+<ul>
+<li>nn.Moudle会自动跟踪保存模型参数，使用parameters()或named_parameters()获取</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>lesson5. 自动求导机制</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson5_autograd.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson5_autograd.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson5. 自动求导机制</source>
+      <description>lesson5. 自动求导机制 import torch 定义最简单的单层神经网络 ## input tensor x = torch.ones(5) ## expected output y = torch.zeros(3) w = torch.randn(5,3,requires_grad=True) b = torch.randn(3,requires_grad=True) z = torch.matmul(x,w) + b loss = torch.nn.functional.binary_cross_entropy_with_logits(z,y)</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson5. 自动求导机制</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 定义最简单的单层神经网络</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 反向传播函数的引用存储在张量的grad_fn属性中</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 计算梯度</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 禁用梯度跟踪</h2>
+<ul>
+<li>有时已有训练好的模型，我们只想推理，不想更新参数，可以使用torch.no_grad()或detach()来禁用梯度计算</li>
+<li>以下是可能要禁用梯度跟踪的几点理由：1.做微调时可能需要冻结某些参数 2.只做推理时提高计算效率</li>
+</ul>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 张量梯度和Jacobian Products</h2>
+<ol>
+<li>PyTorch backward grad实际计算保存的是Jacobian Products=vT*J，默认v=tensor(1.0)</li>
+<li>PyTorch的机制会累积梯度，所以需要清零，实际训练时优化器会自动帮助我们清零</li>
+</ol>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>lesson6. 优化机制</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson6_optimization.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson6_optimization.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson6. 优化机制</source>
+      <description>lesson6. 优化机制 import torch from torch import nn from torch.utils.data import DataLoader from torchvision import datasets from torchvision.transforms import ToTensor,Lambda</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson6. 优化机制</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 前置代码</h2>
+<h3> 数据集&amp;数据加载器&amp;构建模型</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 超参数</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 优化循环</h2>
+<h3> 损失函数</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 优化器</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 完整实现</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>lesson7. 保存和加载模型</title>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson7_save_load.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/PyTorch%E5%85%A5%E9%97%A8/lesson7_save_load.html</guid>
+      <source url="https://lisenjie757.github.io/rss.xml">lesson7. 保存和加载模型</source>
+      <description>lesson7. 保存和加载模型 import torch import torchvision.models as models</description>
+      <pubDate>Wed, 26 Apr 2023 11:51:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> lesson7. 保存和加载模型</h1>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 保存和加载模型权重</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 保存和加载整个模型结构和权重</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 保存和加载训练时的断点</h2>
+<h3> 1.导入必要的库</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 2.定义和初始化神经网络</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 3.初始化优化器</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 4.保存一般断点</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 5.加载一般断点</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+<h2> 6.迁移学习下的热启动模式</h2>
+<h3> 只需设置strict=False来忽略非匹配的模型层参数</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
+]]></content:encoded>
+    </item>
     <item>
       <title>0.【方法论】如何阅读论文</title>
       <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/0.%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA.html</link>
@@ -200,170 +391,6 @@ ImageNet由可变分辨率的图像组成，而我们的系统需要一个恒定
 <p>AlexNet虽然在图像分类任务上取得了很大的提升，但对比人类视觉系统的识别还是有一定差距的。</p>
 ]]></content:encoded>
       <enclosure url="https://i.imgur.com/5F8HDJg.png" type="image/png"/>
-    </item>
-    <item>
-      <title>2.【经典网络】ResNet 论文精读</title>
-      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/2.%20ResNet.html</link>
-      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/2.%20ResNet.html</guid>
-      <source url="https://lisenjie757.github.io/rss.xml">2.【经典网络】ResNet 论文精读</source>
-      <description>2.【经典网络】ResNet 论文精读 原文链接：Deep Residual Learning for Image Recognition 0. 核心总结</description>
-      <pubDate>Wed, 26 Apr 2023 10:47:40 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 2.【经典网络】ResNet 论文精读</h1>
-<blockquote>
-<p>原文链接：<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf" target="_blank" rel="noopener noreferrer">Deep Residual Learning for Image Recognition</a></p>
-</blockquote>
-<h2> 0. 核心总结</h2>
-<p>核心是提出了一种<strong>残差结构</strong>，极好地解决了网络精度随着深度的增加而下降的问题，使得可以通过堆叠层数的方式来提升精度。</p>
-<h2> 1. 摘要</h2>
-<p>更深的神经网络更难训练，本文提出了一个残差学习框架，以减轻深层神经网络训练的难度。本文将网络的层重构为引入层输入的可学习残差函数，代替了之前为引入层输入的函数。</p>
-<p>本文提供了全面的实验证明这些残差网络更容易优化，并且能够从大幅增加的深度中获得准确率增益。在ImageNet数据集上，本文测试了152层的残差网络（比VGG网络深8倍，但具有更低的复杂度），在测试集上达到了3.57%的误差，这个结果赢得了ILSVRC 2015分类任务的第一名。本文也在CIFAR-10数据集上展示了100层和1000层残差网络的分析结果。</p>
-<p>网络的深度对于许多视觉识别任务来说是非常重要的，仅仅由于本文实现了极深网络的训练，本文在COCO目标检测数据集上获得了28%的相对提升。深度残差网络也是作者在ImageNet检测、ImageNet定位、COCO检测和COCO分割任务上取得第1名的基础。</p>
-<h2> 2. 引言</h2>
-<p>卷积神经网络的深度是非常重要的，之前在ImageNet数据集上取得领先结果的经典模型都从深度上受益，但是现在深度卷积神经网络正面临臭名昭著的梯度消失/爆炸问题。</p>
-<p>虽然这个问题目前可以通过Normalization来解决，但却又出现了退化问题：随着网络深度的增加，精度达到饱和，然后迅速退化，即<strong>更深的网络精度反而下降</strong>。这种退化并不是由过拟合引起的，因为训练误差同样增高，实验结果如下图：</p>
-<figure><img src="https://i.imgur.com/pnZMQpr.png" alt="不同层数卷积神经网络的训练和测试误差" tabindex="0" loading="lazy"><figcaption>不同层数卷积神经网络的训练和测试误差</figcaption></figure>
-<p>根据朴素的直觉，即使更深的网络的深层部分“什么都不做”，即输出是输入的恒等映射，深层网络起码也不应该比浅层网络的误差高，但这样的实验结果表明目前的优化器找不到这样的解。</p>
-<p>因此，本文引入了一个残差块来解决退化问题，如下图所示，残差块的核心是通过一个捷径连接（Shortcut Connections，或叫做残差连接）跳过一层或多层卷积将输出增加到层的输出中，添加一个输入的恒等映射。</p>
-<p>用数学公式表达，即我们希望让卷积层拟合一个残差映射 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> ，而不是原映射 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> ，因为通过实验发现卷积层这样的非线性层很难拟合一个恒等映射，所以我们直接增加一个恒等映射。</p>
-<figure><img src="https://i.imgur.com/VFWqkqe.png" alt="残差块结构示意图" tabindex="0" loading="lazy"><figcaption>残差块结构示意图</figcaption></figure>
-<p>通过在ImageNet数据集上的全面实验表明：</p>
-<ol>
-<li>本文的深度残差网络更易于优化，相比简单堆叠的“普通网络”有更低的训练误差；</li>
-<li>本文的深度残差网络可以很容易得从大幅增加的深度中获得精度增益，产出的结果明显优于以前的网络。</li>
-</ol>
-<p>本文也在CIFAR-10数据集上做了同样的测试，得到了同样的优异的精度表现，并探索训练了超过1000层的模型。</p>
-<p>本文训练的152层残差网络在ImageNet测试集上取得了3.57%的top-5误差，同时仍比VGG网络有更低的复杂度，赢得了ILSVRC 2015分类竞赛的第一名；极深的网络在其它识别任务上也具有出色的泛化性能，在ILSVRC和COCO 2015竞赛中进一步获得第1名（ImageNet检测、ImageNet定位、COCO检测和COCO分割）。这表明残差学习的原理具有普适性，它在其他视觉和非视觉问题中也是同样适用的。</p>
-<h2> 3. ResNet网络细节</h2>
-<h3> 3.1 如何增加残差连接</h3>
-<p>在数学公式上，残差块的定义如下：</p>
-<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span></span></p>
-<p>其中， <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 分别为层的输入和输出向量，函数 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span></span></span></span> 表示要学习的残差映射。</p>
-<p>例如，对于上一幅图所示的两层残差块， <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10903em;">LU</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> ，为了简化表示此处省略了偏差（Bias）。接着，残差连接通过 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 操作逐元素相加来实现，相加后再通过一层ReLU输入下一个残差块。</p>
-<p>此外需要注意，在等式中 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> 的维度必须相等，若不相等则可以通过一个线性投影 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 来匹配维度，如下式：</p>
-<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span></span></span></span></span></p>
-<p>此外，以上公式符号为了简单起见表示的是全连接层，但对于卷积层同样也是使用的，函数 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span></span></span></span> 可以表示多个卷积层，逐元素相加在卷积层上即逐通道相加，线性映射在卷积层中一般通过一个1×1的卷积核来实现维度匹配。</p>
-<h3> 3.2 网络架构</h3>
-<p>下图展示了34层的ResNet架构，并与34层的“普通”网络及VGG-19的结构对比：</p>
-<figure><img src="https://i.imgur.com/hhl8lxx.png" alt="ResNet-34架构与其它架构的对比" tabindex="0" loading="lazy"><figcaption>ResNet-34架构与其它架构的对比</figcaption></figure>
-<p>下表给出了ResNet架构的更多细节及更多变体：</p>
-<figure><img src="https://i.imgur.com/Oz8YCZD.png" alt="ResNet不同架构的配置" tabindex="0" loading="lazy"><figcaption>ResNet不同架构的配置</figcaption></figure>
-<p>其中，对于50层以上的深层网络，为了降低其计算复杂度，本文设计了一种瓶颈架构（Bottleneck），如下图所示。即先通过一个1×1的卷积先降低维度，再通过具有较小输入和输出维度的3×3卷积瓶颈，最后再通过一个1×1的卷积恢复维度。通过这样的瓶颈设计可以有效地减少模型的参数两和复杂度。</p>
-<figure><img src="https://i.imgur.com/iOc24tZ.png" alt="屏幕截图 2023-03-26 103814" tabindex="0" loading="lazy"><figcaption>屏幕截图 2023-03-26 103814</figcaption></figure>
-<h3> 3.3 网络训练细节</h3>
-<ol>
-<li>数据增强：对图像的短边在[256,480]中随机采样进行尺度缩放；对图像或其随机翻转进行224×224的随机剪裁采样，并减去每个像素的均值；标准颜色增强。</li>
-<li>在每次卷积之后、激活之前采用批归一化（Batch Normalization）。</li>
-<li>初始化权重从头开始训练，使用SGD优化器，批大小（Batch Size）为256；学习率从0.1开始，当loss不再下降时除以10；最多训练 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span> 个迭代（iteration）；权重衰减（Weight Decay）为0.0001，动量（Momentum）为0.9；不使用Dropout。</li>
-<li>（为了刷榜，没多大必要）在测试时采用标准的10-crop测试，为了获得最佳结果，采用全卷积网络形式，并在多尺度图像上取平均精度（对图像的短边进行缩放在{224,256,384,480,640}中取值）。</li>
-</ol>
-<h2> 4. 实验与结果</h2>
-<p>本文在由1000个类组成的ImageNet-2012分类数据集上进行评估。模型在128万张训练集图像上进行训练，在5万张验证集图像上进行测试，得到top-1和top-5错误率。</p>
-<p>下表对比了不同层数的ResNet和普通网络在ImageNet验证集上的Top-1误差：</p>
-<figure><img src="https://i.imgur.com/LQorajE.png" alt="ResNet和普通网络的对比" tabindex="0" loading="lazy"><figcaption>ResNet和普通网络的对比</figcaption></figure>
-<p>下图展示了它们在训练过程中的训练/验证误差：</p>
-<figure><img src="https://i.imgur.com/OKkMSIU.png" alt="ResNet和普通网络的训练过程" tabindex="0" loading="lazy"><figcaption>ResNet和普通网络的训练过程</figcaption></figure>
-<p>上述图表结果均表明，普通网络的精度随着深度的增加反而会退化，而ResNet则可以从增加的深度中获得精度增益，同时可以发现，ResNet的收敛速度会比普通网络更快。</p>
-<p>本文还研究了三种恒等映射方式：</p>
-<ol>
-<li>A：使用补零的方式来实现维度匹配；</li>
-<li>B：不同维度则使用线性投影来实现维度匹配，相同维度则直接相加；</li>
-<li>C：不论维度是否匹配均使用线性投影。</li>
-</ol>
-<p>实验结果如下表所示，下表为10-crop测试结果，可以发现C略优于B，优于A，但使用C会导致参数量和复杂度过大，所以接下来的实验均采用B方案。</p>
-<figure><img src="https://i.imgur.com/lfMBvg5.png" alt="不同网络架构的10-crop测试结果" tabindex="0" loading="lazy"><figcaption>不同网络架构的10-crop测试结果</figcaption></figure>
-<p>此外，上表还展示了ResNet-50/101/152三种深层ResNet架构的测试结果，可以发现没有出现退化现象，均从深度中获得了精度增益。</p>
-<p>下表展示了单模型的测试结果，得到的结论是相同的。</p>
-<figure><img src="https://i.imgur.com/HBlhfBt.png" alt="不同网络架构的单模型测试结果" tabindex="0" loading="lazy"><figcaption>不同网络架构的单模型测试结果</figcaption></figure>
-<p>此外，上述两个测试结果表均展示与之前SOTA单模型的对比结果，可以发现ResNet-50就由于之前所有的SOTA单模型。</p>
-<p>本文还将6个不同深度的ResNet模型进行集成（两个152层，其余深度各一个），这个集成模型的精度最优，在ILSVRC 2015竞赛中取得了第一名，测试结果如下表所示，下表为与ImageNet测试集上排名前5的模型的对比结果：</p>
-<figure><img src="https://i.imgur.com/RDubP6g.png" alt="与ImageNet测试集排名前5的模型的对比结果" tabindex="0" loading="lazy"><figcaption>与ImageNet测试集排名前5的模型的对比结果</figcaption></figure>
-<h2> 5. 个人思考</h2>
-<p>此前的卷积神经网络架构一直在追求更深的深度，因为能够从增加的深度中获得精度增益，但当深度到了某一界限，更深的层非但没有起作用，反而起了副作用，出现了梯度消失/爆炸的现象。</p>
-<p>本文揭示了发生这种现象的本质原因是由于我们目前的优化器很难去优化到一个恒等映射，即输出对于输入总会发生一定程度的偏移，随着深度的增加，这种偏移会离最优解越偏越远，因此本文将前几层输入信息引入下一层，增加了下一层输入恒等映射的权重，让下一层有选择拟合恒等映射的空间。</p>
-<p>个人的另一种理解是，神经网络的深层神经元会“遗忘”神经网络浅层的特征信息，所以需要通过不断加入浅层信息的方式去“提醒”深层的神经元这个输入的底层特征，来帮助深层神经元做出更优的推断。</p>
-]]></content:encoded>
-      <enclosure url="https://i.imgur.com/pnZMQpr.png" type="image/png"/>
-    </item>
-    <item>
-      <title>3.【经典网络】Transformer 论文精读</title>
-      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/3.%20Transformer.html</link>
-      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/3.%20Transformer.html</guid>
-      <source url="https://lisenjie757.github.io/rss.xml">3.【经典网络】Transformer 论文精读</source>
-      <description>3.【经典网络】Transformer 论文精读 原文链接：Attention Is All You Need 0. 核心总结 核心是提出了一种残差结构，极好地解决了网络精度随着深度的增加而下降的问题，使得可以通过堆叠层数的方式来提升精度。</description>
-      <pubDate>Wed, 26 Apr 2023 10:47:40 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 3.【经典网络】Transformer 论文精读</h1>
-<blockquote>
-<p>原文链接：<a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" target="_blank" rel="noopener noreferrer">Attention Is All You Need</a></p>
-</blockquote>
-<h2> 0. 核心总结</h2>
-<p>核心是提出了一种<strong>残差结构</strong>，极好地解决了网络精度随着深度的增加而下降的问题，使得可以通过堆叠层数的方式来提升精度。</p>
-<h2> 1. 摘要</h2>
-<figure><img src="https://i.imgur.com/VHXz0Mr.png" alt="屏幕截图 2023-04-13 023046" tabindex="0" loading="lazy"><figcaption>屏幕截图 2023-04-13 023046</figcaption></figure>
-<h2> 2. 引言</h2>
-<p>卷积神经网络的深度是非常重要的，之前在ImageNet数据集上取得领先结果的经典模型都从深度上受益，但是现在深度卷积神经网络正面临臭名昭著的梯度消失/爆炸问题。</p>
-<p>虽然这个问题目前可以通过Normalization来解决，但却又出现了退化问题：随着网络深度的增加，精度达到饱和，然后迅速退化，即<strong>更深的网络精度反而下降</strong>。这种退化并不是由过拟合引起的，因为训练误差同样增高，实验结果如下图：</p>
-<figure><img src="https://i.imgur.com/pnZMQpr.png" alt="不同层数卷积神经网络的训练和测试误差" tabindex="0" loading="lazy"><figcaption>不同层数卷积神经网络的训练和测试误差</figcaption></figure>
-<p>根据朴素的直觉，即使更深的网络的深层部分“什么都不做”，即输出是输入的恒等映射，深层网络起码也不应该比浅层网络的误差高，但这样的实验结果表明目前的优化器找不到这样的解。</p>
-<p>因此，本文引入了一个残差块来解决退化问题，如下图所示，残差块的核心是通过一个捷径连接（Shortcut Connections，或叫做残差连接）跳过一层或多层卷积将输出增加到层的输出中，添加一个输入的恒等映射。</p>
-<p>用数学公式表达，即我们希望让卷积层拟合一个残差映射 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> ，而不是原映射 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> ，因为通过实验发现卷积层这样的非线性层很难拟合一个恒等映射，所以我们直接增加一个恒等映射。</p>
-<figure><img src="https://i.imgur.com/VFWqkqe.png" alt="残差块结构示意图" tabindex="0" loading="lazy"><figcaption>残差块结构示意图</figcaption></figure>
-<p>通过在ImageNet数据集上的全面实验表明：</p>
-<ol>
-<li>本文的深度残差网络更易于优化，相比简单堆叠的“普通网络”有更低的训练误差；</li>
-<li>本文的深度残差网络可以很容易得从大幅增加的深度中获得精度增益，产出的结果明显优于以前的网络。</li>
-</ol>
-<p>本文也在CIFAR-10数据集上做了同样的测试，得到了同样的优异的精度表现，并探索训练了超过1000层的模型。</p>
-<p>本文训练的152层残差网络在ImageNet测试集上取得了3.57%的top-5误差，同时仍比VGG网络有更低的复杂度，赢得了ILSVRC 2015分类竞赛的第一名；极深的网络在其它识别任务上也具有出色的泛化性能，在ILSVRC和COCO 2015竞赛中进一步获得第1名（ImageNet检测、ImageNet定位、COCO检测和COCO分割）。这表明残差学习的原理具有普适性，它在其他视觉和非视觉问题中也是同样适用的。</p>
-<h2> 3. ResNet网络细节</h2>
-<h3> 3.1 如何增加残差连接</h3>
-<p>在数学公式上，残差块的定义如下：</p>
-<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span></span></p>
-<p>其中， <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 分别为层的输入和输出向量，函数 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span></span></span></span> 表示要学习的残差映射。</p>
-<p>例如，对于上一幅图所示的两层残差块， <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10903em;">LU</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> ，为了简化表示此处省略了偏差（Bias）。接着，残差连接通过 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 操作逐元素相加来实现，相加后再通过一层ReLU输入下一个残差块。</p>
-<p>此外需要注意，在等式中 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> 的维度必须相等，若不相等则可以通过一个线性投影 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 来匹配维度，如下式：</p>
-<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span></span></span></span></span></p>
-<p>此外，以上公式符号为了简单起见表示的是全连接层，但对于卷积层同样也是使用的，函数 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">})</span></span></span></span> 可以表示多个卷积层，逐元素相加在卷积层上即逐通道相加，线性映射在卷积层中一般通过一个1×1的卷积核来实现维度匹配。</p>
-<h3> 3.2 网络架构</h3>
-<p>下图展示了34层的ResNet架构，并与34层的“普通”网络及VGG-19的结构对比：</p>
-<figure><img src="https://i.imgur.com/hhl8lxx.png" alt="ResNet-34架构与其它架构的对比" tabindex="0" loading="lazy"><figcaption>ResNet-34架构与其它架构的对比</figcaption></figure>
-<p>下表给出了ResNet架构的更多细节及更多变体：</p>
-<figure><img src="https://i.imgur.com/Oz8YCZD.png" alt="ResNet不同架构的配置" tabindex="0" loading="lazy"><figcaption>ResNet不同架构的配置</figcaption></figure>
-<p>其中，对于50层以上的深层网络，为了降低其计算复杂度，本文设计了一种瓶颈架构（Bottleneck），如下图所示。即先通过一个1×1的卷积先降低维度，再通过具有较小输入和输出维度的3×3卷积瓶颈，最后再通过一个1×1的卷积恢复维度。通过这样的瓶颈设计可以有效地减少模型的参数两和复杂度。</p>
-<figure><img src="https://i.imgur.com/iOc24tZ.png" alt="屏幕截图 2023-03-26 103814" tabindex="0" loading="lazy"><figcaption>屏幕截图 2023-03-26 103814</figcaption></figure>
-<h3> 3.3 网络训练细节</h3>
-<ol>
-<li>数据增强：对图像的短边在[256,480]中随机采样进行尺度缩放；对图像或其随机翻转进行224×224的随机剪裁采样，并减去每个像素的均值；标准颜色增强。</li>
-<li>在每次卷积之后、激活之前采用批归一化（Batch Normalization）。</li>
-<li>初始化权重从头开始训练，使用SGD优化器，批大小（Batch Size）为256；学习率从0.1开始，当loss不再下降时除以10；最多训练 <span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span> 个迭代（iteration）；权重衰减（Weight Decay）为0.0001，动量（Momentum）为0.9；不使用Dropout。</li>
-<li>（为了刷榜，没多大必要）在测试时采用标准的10-crop测试，为了获得最佳结果，采用全卷积网络形式，并在多尺度图像上取平均精度（对图像的短边进行缩放在{224,256,384,480,640}中取值）。</li>
-</ol>
-<h2> 4. 实验与结果</h2>
-<p>本文在由1000个类组成的ImageNet-2012分类数据集上进行评估。模型在128万张训练集图像上进行训练，在5万张验证集图像上进行测试，得到top-1和top-5错误率。</p>
-<p>下表对比了不同层数的ResNet和普通网络在ImageNet验证集上的Top-1误差：</p>
-<figure><img src="https://i.imgur.com/LQorajE.png" alt="ResNet和普通网络的对比" tabindex="0" loading="lazy"><figcaption>ResNet和普通网络的对比</figcaption></figure>
-<p>下图展示了它们在训练过程中的训练/验证误差：</p>
-<figure><img src="https://i.imgur.com/OKkMSIU.png" alt="ResNet和普通网络的训练过程" tabindex="0" loading="lazy"><figcaption>ResNet和普通网络的训练过程</figcaption></figure>
-<p>上述图表结果均表明，普通网络的精度随着深度的增加反而会退化，而ResNet则可以从增加的深度中获得精度增益，同时可以发现，ResNet的收敛速度会比普通网络更快。</p>
-<p>本文还研究了三种恒等映射方式：</p>
-<ol>
-<li>A：使用补零的方式来实现维度匹配；</li>
-<li>B：不同维度则使用线性投影来实现维度匹配，相同维度则直接相加；</li>
-<li>C：不论维度是否匹配均使用线性投影。</li>
-</ol>
-<p>实验结果如下表所示，下表为10-crop测试结果，可以发现C略优于B，优于A，但使用C会导致参数量和复杂度过大，所以接下来的实验均采用B方案。</p>
-<figure><img src="https://i.imgur.com/lfMBvg5.png" alt="不同网络架构的10-crop测试结果" tabindex="0" loading="lazy"><figcaption>不同网络架构的10-crop测试结果</figcaption></figure>
-<p>此外，上表还展示了ResNet-50/101/152三种深层ResNet架构的测试结果，可以发现没有出现退化现象，均从深度中获得了精度增益。</p>
-<p>下表展示了单模型的测试结果，得到的结论是相同的。</p>
-<figure><img src="https://i.imgur.com/HBlhfBt.png" alt="不同网络架构的单模型测试结果" tabindex="0" loading="lazy"><figcaption>不同网络架构的单模型测试结果</figcaption></figure>
-<p>此外，上述两个测试结果表均展示与之前SOTA单模型的对比结果，可以发现ResNet-50就由于之前所有的SOTA单模型。</p>
-<p>本文还将6个不同深度的ResNet模型进行集成（两个152层，其余深度各一个），这个集成模型的精度最优，在ILSVRC 2015竞赛中取得了第一名，测试结果如下表所示，下表为与ImageNet测试集上排名前5的模型的对比结果：</p>
-<figure><img src="https://i.imgur.com/RDubP6g.png" alt="与ImageNet测试集排名前5的模型的对比结果" tabindex="0" loading="lazy"><figcaption>与ImageNet测试集排名前5的模型的对比结果</figcaption></figure>
-<h2> 5. 个人思考</h2>
-<p>此前的卷积神经网络架构一直在追求更深的深度，因为能够从增加的深度中获得精度增益，但当深度到了某一界限，更深的层非但没有起作用，反而起了副作用，出现了梯度消失/爆炸的现象。</p>
-<p>本文揭示了发生这种现象的本质原因是由于我们目前的优化器很难去优化到一个恒等映射，即输出对于输入总会发生一定程度的偏移，随着深度的增加，这种偏移会离最优解越偏越远，因此本文将前几层输入信息引入下一层，增加了下一层输入恒等映射的权重，让下一层有选择拟合恒等映射的空间。</p>
-<p>个人的另一种理解是，神经网络的深层神经元会“遗忘”神经网络浅层的特征信息，所以需要通过不断加入浅层信息的方式去“提醒”深层的神经元这个输入的底层特征，来帮助深层神经元做出更优的推断。</p>
-]]></content:encoded>
-      <enclosure url="https://i.imgur.com/VHXz0Mr.png" type="image/png"/>
     </item>
   </channel>
 </rss>
