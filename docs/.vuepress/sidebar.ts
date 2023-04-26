@@ -13,4 +13,12 @@ export default sidebar([
     collapsible: true,
     children: "structure",
   },
+  {
+    text: "💻 PyTorch入门",
+    icon: "",
+    prefix: "/知识库/PyTorch入门/",
+    link: "",
+    collapsible: true,
+    children: "structure",
+  },
 ]);
