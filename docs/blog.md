@@ -7,7 +7,7 @@ icon: home
 heroText: Jayson Blog
 tagline: 已识乾坤大 犹怜草木青
 bgImage: https://w.wallhaven.cc/full/vq/wallhaven-vqoo1p.jpg
-heroFullScreen: true
+heroFullScreen: false
 article: false
 #projects:
 #  - icon: project
