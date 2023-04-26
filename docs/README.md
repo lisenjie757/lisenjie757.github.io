@@ -6,4 +6,4 @@ heroText: false
 tagline: false
 ---
 
-# This is my personal Page.
+This is my personal Page.
