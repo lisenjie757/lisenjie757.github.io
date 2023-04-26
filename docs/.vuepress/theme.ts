@@ -19,9 +19,9 @@ export default hopeTheme({
   breadcrumb: true,
 
   // 页面元数据：贡献者，最后修改时间，编辑链接
-  contributors: false,
+  contributors: true,
   lastUpdated: true,
-  editLink: true,
+  editLink: false,
 
   // 深色模式配置
   darkmode: "switch",
@@ -96,7 +96,11 @@ export default hopeTheme({
     blog: {
       excerpt: true,
     },
-
+    // 代码复制
+    copyCode: {
+      showInMobile: true,
+    },
+    
     // 评论配置（仅做样例，记得更换）
     comment: {
       provider: "Waline",
