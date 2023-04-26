@@ -6,17 +6,17 @@
     <link>https://lisenjie757.github.io/</link>
     <description>李森杰的个人主页</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 26 Apr 2023 10:35:24 GMT</pubDate>
-    <lastBuildDate>Wed, 26 Apr 2023 10:35:24 GMT</lastBuildDate>
+    <pubDate>Wed, 26 Apr 2023 10:48:48 GMT</pubDate>
+    <lastBuildDate>Wed, 26 Apr 2023 10:48:48 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
       <title>0.【方法论】如何阅读论文</title>
-      <link>https://lisenjie757.github.io/knowledge/paper/0.%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA.html</link>
-      <guid>https://lisenjie757.github.io/knowledge/paper/0.%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA.html</guid>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/0.%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/0.%20%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA.html</guid>
       <source url="https://lisenjie757.github.io/rss.xml">0.【方法论】如何阅读论文</source>
       <description>0.【方法论】如何阅读论文 1 【吴恩达】读论文的方法 吴恩达cs230课程中的一节，视频链接：link 1.1 收集论文</description>
-      <pubDate>Mon, 17 Apr 2023 10:57:27 GMT</pubDate>
+      <pubDate>Wed, 26 Apr 2023 10:47:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 0.【方法论】如何阅读论文</h1>
 <h2> 1 【吴恩达】读论文的方法</h2>
 <p>吴恩达cs230课程中的一节，视频链接：<a href="https://www.bilibili.com/video/BV195411Y7ms/?from=search&amp;seid=6380620962674373232&amp;spm_id_from=333.337.0.0&amp;vd_source=e8390493db96c0c1ca516a431544c5d8" target="_blank" rel="noopener noreferrer">link</a></p>
@@ -126,11 +126,11 @@
     </item>
     <item>
       <title>1.【经典网络】AlexNet 论文精读</title>
-      <link>https://lisenjie757.github.io/knowledge/paper/1.%20AlexNet.html</link>
-      <guid>https://lisenjie757.github.io/knowledge/paper/1.%20AlexNet.html</guid>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/1.%20AlexNet.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/1.%20AlexNet.html</guid>
       <source url="https://lisenjie757.github.io/rss.xml">1.【经典网络】AlexNet 论文精读</source>
       <description>1.【经典网络】AlexNet 论文精读 原文链接：ImageNet Classification with Deep Convolutional Neural Networks 0. 核心总结 核心是提出了一种深层卷积神经网络的架构，并引入了GPU训练、ReLU激活函数、Dropout正则化这些训练深层卷积神经网络的手段。</description>
-      <pubDate>Mon, 17 Apr 2023 10:57:27 GMT</pubDate>
+      <pubDate>Wed, 26 Apr 2023 10:47:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 1.【经典网络】AlexNet 论文精读</h1>
 <blockquote>
 <p>原文链接：<a href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf" target="_blank" rel="noopener noreferrer">ImageNet Classification with Deep Convolutional Neural Networks</a></p>
@@ -203,11 +203,11 @@ ImageNet由可变分辨率的图像组成，而我们的系统需要一个恒定
     </item>
     <item>
       <title>2.【经典网络】ResNet 论文精读</title>
-      <link>https://lisenjie757.github.io/knowledge/paper/2.%20ResNet.html</link>
-      <guid>https://lisenjie757.github.io/knowledge/paper/2.%20ResNet.html</guid>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/2.%20ResNet.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/2.%20ResNet.html</guid>
       <source url="https://lisenjie757.github.io/rss.xml">2.【经典网络】ResNet 论文精读</source>
       <description>2.【经典网络】ResNet 论文精读 原文链接：Deep Residual Learning for Image Recognition 0. 核心总结</description>
-      <pubDate>Mon, 17 Apr 2023 10:57:27 GMT</pubDate>
+      <pubDate>Wed, 26 Apr 2023 10:47:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 2.【经典网络】ResNet 论文精读</h1>
 <blockquote>
 <p>原文链接：<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf" target="_blank" rel="noopener noreferrer">Deep Residual Learning for Image Recognition</a></p>
@@ -286,11 +286,11 @@ ImageNet由可变分辨率的图像组成，而我们的系统需要一个恒定
     </item>
     <item>
       <title>3.【经典网络】Transformer 论文精读</title>
-      <link>https://lisenjie757.github.io/knowledge/paper/3.%20Transformer.html</link>
-      <guid>https://lisenjie757.github.io/knowledge/paper/3.%20Transformer.html</guid>
+      <link>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/3.%20Transformer.html</link>
+      <guid>https://lisenjie757.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/3.%20Transformer.html</guid>
       <source url="https://lisenjie757.github.io/rss.xml">3.【经典网络】Transformer 论文精读</source>
       <description>3.【经典网络】Transformer 论文精读 原文链接：Attention Is All You Need 0. 核心总结 核心是提出了一种残差结构，极好地解决了网络精度随着深度的增加而下降的问题，使得可以通过堆叠层数的方式来提升精度。</description>
-      <pubDate>Mon, 17 Apr 2023 10:57:27 GMT</pubDate>
+      <pubDate>Wed, 26 Apr 2023 10:47:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 3.【经典网络】Transformer 论文精读</h1>
 <blockquote>
 <p>原文链接：<a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" target="_blank" rel="noopener noreferrer">Attention Is All You Need</a></p>
