@@ -39,9 +39,9 @@ export default defineUserConfig({
   plugins: [
     // algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
     docsearchPlugin({
-      indexName: "newzone",
-      appId: "M4EXXEZIEG",
-      apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
+      indexName: "lisenjie757io",
+      appId: "YH29YYE0X6",
+      apiKey: "b70f61d365322ac12a608001675f573e",
     }),
     // 本地搜索，删除上方 docsearchPlugin 区块后生效
     searchProPlugin({
