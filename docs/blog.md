@@ -4,10 +4,10 @@ home: false
 layout: BlogHome
 icon: home
 #heroImage: /logo.svg
-heroText: 阿斯顿
-tagline: 重重次
-bgImage: https://img.newzone.top/home-bg-1.jpg
-heroFullScreen: false
+heroText: Jayson Blog
+tagline: 已识乾坤大 犹怜草木青
+bgImage: https://w.wallhaven.cc/full/vq/wallhaven-vqoo1p.jpg
+heroFullScreen: true
 article: false
 #projects:
 #  - icon: project
