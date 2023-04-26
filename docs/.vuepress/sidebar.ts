@@ -8,7 +8,7 @@ export default sidebar([
   {
     text: "📑 文献精读",
     icon: "",
-    prefix: "/knowledge/paper/",
+    prefix: "/知识库/文献精读/",
     link: "",
     collapsible: true,
     children: "structure",

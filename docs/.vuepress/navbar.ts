@@ -7,8 +7,8 @@ export default navbar([
   {
     text: "知识库",
     icon: "study",
-    link: "/knowledge",
-    prefix: "/knowledge/",
+    link: "/知识库",
+    prefix: "/知识库/",
   },
 
   { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
