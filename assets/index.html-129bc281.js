@@ -1,0 +1,1 @@
+import{_ as e,Y as n,Z as o,$ as t}from"./framework-c2b1cf81.js";const s={},c=t("p",null,"This is my personal homepage. To be continued...",-1),_=[c];function a(r,i){return n(),o("div",null,_)}const d=e(s,[["render",a],["__file","index.html.vue"]]);export{d as default};
