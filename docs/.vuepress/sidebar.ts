@@ -6,6 +6,14 @@ export default sidebar([
   //{ text: "读书笔记", icon: "read", link: "https://lisenjie757.github.io/knowledge/reading/" },
   // 指定显示页面
   {
+    text: "🧮 数学基础",
+    icon: "",
+    prefix: "/知识库/数学基础/",
+    link: "",
+    collapsible: true,
+    children: "structure",
+  },
+  {
     text: "📑 文献精读",
     icon: "",
     prefix: "/知识库/文献精读/",
