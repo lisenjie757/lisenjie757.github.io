@@ -6,8 +6,8 @@
     <link>https://lisenjie757.github.io/</link>
     <description>李森杰的个人主页</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 11 Sep 2023 13:24:47 GMT</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2023 13:24:47 GMT</lastBuildDate>
+    <pubDate>Mon, 11 Sep 2023 13:35:30 GMT</pubDate>
+    <lastBuildDate>Mon, 11 Sep 2023 13:35:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -401,7 +401,7 @@ ImageNet由可变分辨率的图像组成，而我们的系统需要一个恒定
 <p>下表给出了ResNet架构的更多细节及更多变体：</p>
 <figure><img src="https://i.imgur.com/Oz8YCZD.png" alt="ResNet不同架构的配置" tabindex="0" loading="lazy"><figcaption>ResNet不同架构的配置</figcaption></figure>
 <p>其中，对于50层以上的深层网络，为了降低其计算复杂度，本文设计了一种瓶颈架构（Bottleneck），如下图所示。即先通过一个1×1的卷积先降低维度，再通过具有较小输入和输出维度的3×3卷积瓶颈，最后再通过一个1×1的卷积恢复维度。通过这样的瓶颈设计可以有效地减少模型的参数两和复杂度。</p>
-<figure><img src="https://i.imgur.com/iOc24tZ.png" alt="屏幕截图 2023-03-26 103814" tabindex="0" loading="lazy"><figcaption>屏幕截图 2023-03-26 103814</figcaption></figure>
+<figure><img src="https://i.imgur.com/iOc24tZ.png" alt="Bottleneck示意图" tabindex="0" loading="lazy"><figcaption>Bottleneck示意图</figcaption></figure>
 <h3> 3.3 网络训练细节</h3>
 <ol>
 <li>数据增强：对图像的短边在[256,480]中随机采样进行尺度缩放；对图像或其随机翻转进行224×224的随机剪裁采样，并减去每个像素的均值；标准颜色增强。</li>
